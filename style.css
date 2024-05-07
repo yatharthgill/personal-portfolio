@@ -280,7 +280,7 @@ input[type="tel"] {
     display: none;
   }
   .as{
-    height: 75vh;
+    height: 100vh;
   }
   #form-container {
     width: 80vw;
