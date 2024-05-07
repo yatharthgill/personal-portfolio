@@ -17,8 +17,14 @@ body {
 .navbar-brand {
   color: white;
 }
-.nav-link:hover,
+.lavender{
+  color: rgb(162, 162, 229);
+}
+a:hover,.nav-link:hover,
 .navbar-brand:hover {
+  color: rgb(162, 162, 229);
+}
+.text-primary{
   color: rgb(162, 162, 229);
 }
 .social-icons li {
