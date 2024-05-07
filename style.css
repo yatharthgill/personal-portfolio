@@ -9,19 +9,26 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  background-color: rgb(0, 0, 50);
+.navbar {
+  background: rgb(0, 0, 50);
+  /* height: 100px; */
 }
-nav ul {
+.nav-link,
+.navbar-brand {
+  color: white;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+  color: rgb(162, 162, 229);
+}
+.social-icons li {
+  margin: 0px 10px;
+}
+ul {
   display: flex;
   justify-content: center;
 }
-nav ul li,
-footer ul li {
+ul li {
   list-style: none;
   margin: 0 23px;
 }
@@ -29,10 +36,7 @@ a {
   color: white;
   text-decoration: none;
 }
-nav ul li a:hover,
-footer ul li a:hover {
-  color: rgb(162, 162, 229);
-}
+
 footer {
   display: flex;
   padding: 0 10vw;
@@ -49,9 +53,7 @@ footer ul {
   width: 80vw;
   margin: auto;
 }
-.social-icons li {
-  margin: 0 15px;
-}
+
 .left {
   display: flex;
   align-items: center;
@@ -86,13 +88,13 @@ footer ul {
 main hr {
   border: none;
   height: 2px;
-  width: 90vw;
+  /* width: 90vw; */
   margin: auto;
   background-color: rgb(224, 15, 224);
 }
 .second-section {
   align-items: center;
-  max-width: 80vw;
+  width: 80vw;
   height: 90vh;
   margin: auto;
   margin-top: 50px;
@@ -131,17 +133,22 @@ main hr {
 .buttons {
   margin-top: 63px;
 }
-.work {
+.row {
   display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .card {
+  padding: 0;
   background: rgb(0, 0, 33);
   color: white;
   color: white;
-  height: 60vh;
+  height: auto;
   font-family: "Poppins", sans-serif;
   border: 1px solid gray;
+  margin: 30px 30px;
+  width: 22%;
 }
 .fwt-bold {
   font-weight: 500;
@@ -150,18 +157,18 @@ main hr {
 #form-container {
   border: 1px solid gray;
   width: 30vw;
-  height: auto;
+  height:  60vh;
   padding: 40px 100px;
 }
-.form-control{
-  border: 2px solid  rgb(0, 0, 0);
+.form-control {
+  border: 2px solid rgb(0, 0, 0);
   background: rgb(188, 188, 188);
 }
-.form-control:focus{
+.form-control:focus {
   background: none;
   color: white;
 }
-.form-control:valid{
+.form-control:valid {
   color: white;
 }
 input {
@@ -175,27 +182,156 @@ input[type="tel"] {
   text-align: center;
 }
 /* about us */
-.as{
+.as {
   align-items: center;
-  margin: 50px auto;
+  margin: 10px auto;
 }
-.about-section{
+.about-section {
   font-size: 3rem;
 }
-.about{
+.about {
   color: gray;
   width: 30vw;
   text-align: justify;
   font-size: 1rem;
 }
 
-.about-img img{
+.about-img img {
   height: 56vh;
-  margin-left:30vw ;
+  margin-left: 30vw;
 }
-.service-cards{
+.service-cards {
   height: 85vh;
 }
-.service-cards img{
+.service-cards img {
   height: 40vh;
+}
+/* Add CSS for small screens */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+
+  .width {
+    width: 100vw;
+  }
+  main {
+    width: 100%;
+  }
+  .first-section {
+    width: 100vw;
+    margin: 100px 20px;
+  }
+  .left-section {
+    width: 100vw;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .right-section {
+    display: none;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .second-section {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    margin: 30px 30px;
+    height: auto;
+    width: 50%;
+  }
+  .btn {
+    height: auto;
+  }
+  .footer-icons {
+    display: none;
+  }
+  .about-section{
+    width: 90vw;
+  }
+  .about{
+    width: 70vw;
+  }
+  .about-img{
+    display: none;
+  }
+  .as{
+    height: 55.5vh;
+  }
+  #form-container {
+    width: 80vw;
+    height:  60vh;
+    padding: 40px 0px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1350px) {
+  .second-section {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .row {
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .card {
+    width: 35%;
+    margin: 50px 0px;
+  }
+  .about{
+    width: 40vw;
+    height: auto;
+  }
+  .about-img{
+    height: auto;
+    width: 40vw;
+    margin: 0;
+  }
+  .about-img img{
+    margin-left: 10vw;
+  }
+  .as{
+    height: 75vh;
+  }
+  #form-container {
+    width: 80vw;
+    padding: 40px 0px;
+    height:  60vh;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 50vw;
+  }
+
 }
